@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Wine Quality Prediction</h2>
+        <form action="/predict" method="POST">
+            <label for="fixed_acidity">Fixed Acidity:</label>
+            <input type="text" name="fixed_acidity" required><br>
+            <label for="volatile_acidity">Volatile Acidity:</label>
+            <input type="text" name="volatile_acidity" required><br>
+            <label for="citric_acid">Citric Acid:</label>
+            <input type="text" name="citric_acid" required><br>
+            <label for="residual_sugar">Residual Sugar:</label>
+            <input type="text" name="residual_sugar" required><br>
+            <label for="chlorides">Chlorides:</label>
+            <input type="text" name="chlorides" required><br>
+            <label for="free_sulfur_dioxide">Free Sulfur Dioxide:</label>
+            <input type="text" name="free_sulfur_dioxide" required><br>
+            <label for="total_sulfur_dioxide">Total Sulfur Dioxide:</label>
+            <input type="text" name="total_sulfur_dioxide" required><br>
+            <label for="density">Density:</label>
+            <input type="text" name="density" required><br>
+            <label for="pH">pH:</label>
+            <input type="text" name="pH" required><br>
+            <label for="sulphates">Sulphates:</label>
+            <input type="text" name="sulphates" required><br>
+            <label for="alcohol">Alcohol:</label>
+            <input type="text" name="alcohol" required><br>
+            <button type="submit">Predict Quality</button>
+        </form>
+        {% if prediction_text %}
+            <h3>{{ prediction_text }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>

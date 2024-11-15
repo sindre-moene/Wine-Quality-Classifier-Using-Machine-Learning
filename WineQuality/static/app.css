@@ -1,0 +1,43 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+form label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+
+form input {
+    padding: 8px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4cae4c;
+}
